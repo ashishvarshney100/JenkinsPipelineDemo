@@ -4,6 +4,7 @@ pipeline {
         stage("Git Clone") {
             steps {
                 sh "Cloning git repo......."
+                sh "git 'https://github.com/ashishvarshney100/JenkinsPipelineDemo.git'"
             }
         }
         stage("Build"){
