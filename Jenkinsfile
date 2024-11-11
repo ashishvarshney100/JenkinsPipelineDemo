@@ -1,10 +1,12 @@
 pipeline {
     agent any 
+    tools {
+        git 'git'
+    }
     stages {
         stage("Git Clone") {
             steps {
-                sh "Cloning git repo......."
-                git changelog: false, poll: false, url: 'https://github.com/ashishvarshney100/JenkinsPipelineDemo'
+              sh "git changelog: false, poll: false, url: 'https://github.com/ashishvarshney100/JenkinsPipelineDemo'"
             }
         }
         stage("Build"){
