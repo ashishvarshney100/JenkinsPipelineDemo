@@ -1,5 +1,8 @@
 pipeline {
     agent any 
+    tools {
+        jdk 'jdk' 
+    }
     stages {
         stage("Git Clone") {
             steps {
